@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="flex space-x-8">
+  <div class="p-8 border rounded-lg">
+    <h1 class="text-xl">Hello World</h1>
+    {% if is_prod %}
+    <div>{{ name }}</div>
+    {% endif %}
+    <div>{{ log.ID }}</div>
+    <div>{{ log.Username }}</div>
+    <div>{{ log.CreatedAt }}</div>
+  </div>
+  {# <div hx-get="/{{ lang }}/login" hx-trigger="load"></div> #}
+  <div class="w-96 p-8 border rounded-lg">
+    {% include "partials/login.html" %}
+  </div>
+</div>
+{% endblock %}

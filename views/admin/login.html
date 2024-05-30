@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+
+{% block title %}<title>Login - Admin</title>{% endblock %}
+
+{% block main %}
+<div class="fixed inset-0 flex items-center justify-center bg-gray-100">
+  <div class="w-[32rem] p-8 bg-white border rounded-lg">
+    <h1 class="text-xl">Login to Admin</h1>
+    <div class="pt-8">
+      {% include "admin/partials/login.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

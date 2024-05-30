@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body {
+  @apply text-gray-900;
+}
+
+input, textarea, button, select {
+  @apply focus:outline-none;
+}
+
+[x-cloak] { display: none !important; }
+
+.no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-spin[type=number] {
+  -moz-appearance: textfield;
+}
+
+.htmx-indicator {
+  visibility: hidden;
+}
+.htmx-request .htmx-indicator, .htmx-request.htmx-indicator {
+  visibility: visible;
+}
