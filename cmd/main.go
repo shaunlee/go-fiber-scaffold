@@ -20,7 +20,6 @@ import (
 const createSchema = "CREATE TABLE IF NOT EXISTS logs (id integer primary key, username text not null, created_at integer default (unixepoch()))"
 
 func main() {
-	db.New()
 	defer db.Close()
 	db.DB().MustExec(createSchema)
 

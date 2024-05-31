@@ -7,7 +7,7 @@ import (
 
 var db *sqlx.DB
 
-func New() {
+func init() {
 	db = sqlx.MustConnect("sqlite3", "file:data.db?mode=rwc")
 	db.SetMaxOpenConns(1)
 	db.MustExec("PRAGMA journal_mode = WAL; PRAGMA foreign_keys = true; PRAGMA synchronous = 1")
