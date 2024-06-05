@@ -12,6 +12,7 @@ import (
 	"os/signal"
 	"scaffold/pkg/admin"
 	"scaffold/pkg/front"
+	"scaffold/pkg/sse"
 	"scaffold/utils/db"
 	"scaffold/utils/tracker"
 	"syscall"
@@ -43,6 +44,7 @@ func main() {
 	app.Use(csrf.New(csrf.Config{KeyLookup: "cookie:csrf_"}))
 
 	app.Mount("/admin", admin.Router())
+	app.Mount("/sse", sse.Router())
 	app.Mount("/", front.Router())
 
 	go func() {
