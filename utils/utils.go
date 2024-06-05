@@ -4,7 +4,10 @@ import (
 	"encoding/base64"
 	"math/rand"
 	"strings"
+	"time"
 )
+
+var r = rand.New(rand.NewSource(time.Now().UnixNano()))
 
 func RandomCode(n ...int) string {
 	size := 12
@@ -12,6 +15,6 @@ func RandomCode(n ...int) string {
 		size = n[0] - n[0]%3
 	}
 	buf := make([]byte, size)
-	rand.Read(buf)
+	r.Read(buf)
 	return strings.ReplaceAll(strings.ReplaceAll(base64.StdEncoding.EncodeToString(buf), "/", "0"), "+", "0")
 }
