@@ -8,6 +8,7 @@ require (
 	github.com/goccy/go-json v0.10.3
 	github.com/gofiber/fiber/v2 v2.52.2
 	github.com/gofiber/template/django/v3 v3.1.11
+	github.com/hypersequent/uuid7 v0.0.0-20231030161810-b185c0d4331f
 	github.com/jmoiron/sqlx v1.4.0
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/nats-io/nats.go v1.35.0
@@ -31,6 +32,7 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-runewidth v0.0.15 // indirect
+	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/nats-io/nkeys v0.4.7 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/philhofer/fwd v1.1.2 // indirect
